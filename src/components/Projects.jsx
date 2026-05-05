@@ -1,37 +1,80 @@
 import { useState } from 'react';
 import './Projects.css';
 
+import imgRecycling   from '../assets/Screenshot 2025-03-29 040758.png';
+import imgAzure       from '../assets/Screenshot 2025-05-16 112355.png';
+import imgAmazon      from '../assets/Screenshot 2025-09-03 220745.png';
+import imgMovie       from '../assets/Screenshot 2025-09-05 165909.png';
+import imgPair        from '../assets/WhatsApp Image 2026-05-05 at 2.03.57 PM.jpeg';
+import imgDocSummary  from '../assets/Screenshot 2025-09-05 004537.png';
+import imgEvaid       from '../assets/Screenshot 2026-05-05 145147.png';
+
 const projects = [
   {
     title: 'VigorNode — AI Trainer Platform',
     desc: 'Startup: trainers build custom AI models trained on their coaching style and deploy agents to handle client coaching at scale. Cross-platform mobile/web app (iOS, Android, Web) with Expo Router, Supabase auth, PostgreSQL, and a NestJS REST API. Auth, dashboard, and client list are live — AI training pipeline actively in development.',
-    tags: ['React Native', 'Expo', 'TypeScript', 'NestJS', 'Supabase', 'PostgreSQL', 'Node.js'],
+    tags: ['React Native', 'Expo', 'TypeScript', 'NestJS', 'Supabase', 'PostgreSQL'],
     color: 'purple',
     emoji: '💪',
     github: 'https://github.com/yaya1441415',
     live: null,
     highlight: true,
     label: 'Startup',
+    teamLabel: 'Solo',
+    role: 'Founder & Lead Engineer — architecture, frontend, backend',
+    image: null,
   },
   {
     title: 'Pair — B2B Workflow SaaS',
-    desc: 'Production B2B SaaS platform for transportation & field-service companies. Replaces spreadsheets and paper with mobile-first digital timesheets, service reports, and admin dashboards. Serving real paying clients.',
-    tags: ['React Native', 'TypeScript', 'Node.js', 'AWS Lambda', 'DynamoDB', 'GraphQL', 'AppSync'],
-    color: 'purple',
+    desc: 'Production B2B SaaS for transportation & field-service companies. Replaces spreadsheets and paper with mobile-first digital timesheets, service reports, mileage tracking, and admin dashboards. Serving real paying clients (DAFE Transportation).',
+    tags: ['React Native', 'TypeScript', 'Node.js', 'AWS Lambda', 'DynamoDB', 'GraphQL'],
+    color: 'cyan',
     emoji: '🚛',
     github: 'https://github.com/yaya1441415',
     live: null,
     highlight: true,
     label: 'Production · Freelance',
+    teamLabel: 'Solo',
+    role: 'Sole developer — full stack, cloud infrastructure, client delivery',
+    image: imgPair,
+  },
+  {
+    title: 'Azure Optimizer',
+    desc: 'Web platform that connects to your Azure account to provide real-time usage insights and automatically allocates and scales resources — maximising performance while minimising cloud costs.',
+    tags: ['React', 'Azure', 'Cloud', 'Node.js', 'TypeScript'],
+    color: 'cyan',
+    emoji: '☁️',
+    github: 'https://github.com/yaya1441415',
+    live: null,
+    teamLabel: 'Solo',
+    role: 'Sole developer — Azure integration, dashboard, resource scheduling',
+    image: imgAzure,
+  },
+  {
+    title: 'Evaid — Legal Case Management Platform',
+    desc: 'Capstone project: AI-powered legal/investigative case management system. Ingests PDFs and images, runs Azure AI Document Intelligence + OpenAI pipelines to extract structured "signals" (key facts & entities), and presents everything through a case management UI with graph-based evidence visualization. Three-tier RBAC: Evaid Admin, Org Admin, and Agent.',
+    tags: ['React 19', 'TypeScript', 'FastAPI', 'Python', 'Azure AI', 'OpenAI', 'SQL Server', 'Docker', '@xyflow/react'],
+    color: 'coral',
+    emoji: '⚖️',
+    github: 'https://github.com/yaya1441415',
+    live: null,
+    highlight: true,
+    label: 'Capstone',
+    teamLabel: 'Solo',
+    role: 'Sole developer — full stack, AI pipeline, graph visualization, RBAC system',
+    image: imgEvaid,
   },
   {
     title: 'Local RAG Pipeline',
     desc: 'Fully local, zero-cost RAG system — upload PDFs and chat with them. No OpenAI, no API keys. Uses Ollama (llama3.2 + nomic-embed-text) for embeddings and generation, Qdrant as the vector store, and Inngest for background job orchestration.',
     tags: ['FastAPI', 'Python', 'Qdrant', 'Ollama', 'Streamlit', 'LlamaIndex', 'Inngest'],
-    color: 'cyan',
+    color: 'green',
     emoji: '🧠',
     github: 'https://github.com/yaya1441415',
     live: null,
+    teamLabel: 'Solo',
+    role: 'Sole developer — pipeline design, backend, frontend',
+    image: null,
   },
   {
     title: 'AI Movie Recommendation Engine',
@@ -41,33 +84,45 @@ const projects = [
     emoji: '🎬',
     github: 'https://github.com/yaya1441415',
     live: null,
+    teamLabel: 'Solo',
+    role: 'Sole developer — ML pipeline, backend API, React frontend',
+    image: imgMovie,
   },
   {
     title: 'Document Summarization Platform',
     desc: 'Polyglot microservices system — React frontend, Node.js API gateway, Python NLP service — for low-latency document ingestion and AI summarisation at scale. DOCX parsing via Multer + Mammoth.js.',
     tags: ['React', 'Node.js', 'Python', 'MongoDB', 'NLP', 'Microservices'],
-    color: 'green',
+    color: 'purple',
     emoji: '📄',
     github: 'https://github.com/yaya1441415',
     live: null,
+    teamLabel: 'Solo',
+    role: 'Sole developer — microservices architecture, NLP integration',
+    image: imgDocSummary,
   },
   {
     title: 'Amazon Reviews Analytics Platform',
     desc: 'Full-stack analytics dashboard scraping and processing 10,000+ Amazon reviews via Selenium, running sentiment analysis, and visualising insights — reducing manual research by 13 hrs/week.',
-    tags: ['Flask', 'Selenium', 'React', 'Python', 'NLP', 'JavaScript'],
-    color: 'purple',
+    tags: ['Flask', 'Selenium', 'React', 'Python', 'NLP'],
+    color: 'cyan',
     emoji: '📊',
     github: 'https://github.com/yaya1441415',
     live: null,
+    teamLabel: 'Solo',
+    role: 'Sole developer — scraping engine, NLP pipeline, dashboard',
+    image: imgAmazon,
   },
   {
     title: 'Gamified Recycling Web App',
-    desc: 'Campus recycling platform using OpenCV to detect and classify items with a gamification layer that increased campus recycling participation by 56%.',
+    desc: 'Campus recycling platform using OpenCV to detect and classify recyclable items in real time, with a score-based gamification layer that increased campus recycling participation by 56%.',
     tags: ['Express', 'MongoDB', 'OpenCV', 'Python', 'JavaScript'],
-    color: 'cyan',
+    color: 'green',
     emoji: '♻️',
     github: 'https://github.com/yaya1441415',
     live: null,
+    teamLabel: 'Solo',
+    role: 'Sole developer — computer vision pipeline, backend, gamification',
+    image: imgRecycling,
   },
 ];
 
@@ -80,7 +135,7 @@ export default function Projects() {
         <p className="section-label">What I've Built</p>
         <h2 className="section-title">Featured Projects</h2>
         <p className="section-sub">
-          From local AI pipelines to production B2B SaaS — each project ships real value.
+          From local AI pipelines to production B2B SaaS — each project ships real value. All projects built individually unless noted otherwise.
         </p>
 
         <div className="oss-banner">
@@ -102,9 +157,20 @@ export default function Projects() {
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
             >
-              {p.highlight && <div className="project-featured-badge">{p.label || 'Featured'}</div>}
+              {p.image ? (
+                <div className="project-img-wrap">
+                  <img src={p.image} alt={`${p.title} screenshot`} className="project-img" />
+                </div>
+              ) : (
+                <div className="project-img-placeholder">
+                  <span className="project-img-emoji">{p.emoji}</span>
+                  <span className="project-img-hint">Screenshot coming soon</span>
+                </div>
+              )}
+
+              {p.highlight && <div className="project-featured-badge">{p.label}</div>}
+
               <div className="project-top">
-                <div className="project-emoji">{p.emoji}</div>
                 <div className="project-links">
                   {p.github && (
                     <a href={p.github} target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -117,9 +183,16 @@ export default function Projects() {
                     </a>
                   )}
                 </div>
+                <span className={`team-badge team-badge--${p.teamLabel === 'Solo' ? 'solo' : 'team'}`}>
+                  {p.teamLabel === 'Solo' ? '👤 Solo' : `👥 ${p.teamLabel}`}
+                </span>
               </div>
+
               <h3 className="project-title">{p.title}</h3>
               <p className="project-desc">{p.desc}</p>
+              {p.role && (
+                <p className="project-role"><strong>My role:</strong> {p.role}</p>
+              )}
               <div className="project-tags">
                 {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
               </div>

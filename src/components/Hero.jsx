@@ -15,15 +15,16 @@ export default function Hero() {
         <div className="hero-text fade-up">
           <div className="hero-badge">
             <span className="badge-dot"></span>
-            Open to internship &amp; full-time opportunities
+            Open to internship &amp; new grad opportunities
           </div>
-          <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Yahya</span>
-            <br />
-            Software Engineer
-          </h1>
+          <h1 className="hero-name">Yahya Ouchchen</h1>
+          <div className="hero-student-info">
+            <span className="hero-info-pill">🎓 B.S. Computer Science &amp; Data Analytics</span>
+            <span className="hero-info-pill">📅 Graduating 2026</span>
+            <span className="hero-info-pill">📍 Seattle, WA</span>
+          </div>
           <p className="hero-desc">
-            Software engineering graduate skilled in Python, JavaScript, and cloud-native systems.
+            Software engineering student skilled in Python, JavaScript, and cloud-native systems.
             I build scalable microservices, SaaS platforms, and AI-powered applications — shipped to real clients.
           </p>
           <div className="hero-actions">
@@ -51,28 +52,18 @@ export default function Hero() {
           <div className="avatar-card">
             <div className="avatar-ring">
               <div className="avatar-inner">
-                <span>Y</span>
+                <span>YO</span>
               </div>
             </div>
-            <div className="floating-chip chip1">
-              <span>⚡</span> React
-            </div>
-            <div className="floating-chip chip2">
-              <span>🐍</span> Python
-            </div>
-            <div className="floating-chip chip3">
-              <span>☁️</span> AWS / GCP
-            </div>
-            <div className="floating-chip chip4">
-              <span>🔧</span> Node.js
-            </div>
+            <div className="floating-chip chip1"><span>⚡</span> React Native</div>
+            <div className="floating-chip chip2"><span>🐍</span> Python</div>
+            <div className="floating-chip chip3"><span>☁️</span> AWS / GCP</div>
+            <div className="floating-chip chip4"><span>🔧</span> Node.js</div>
           </div>
         </div>
       </div>
       <div className="scroll-hint" onClick={() => scrollTo('about')}>
-        <div className="scroll-mouse">
-          <div className="scroll-wheel"></div>
-        </div>
+        <div className="scroll-mouse"><div className="scroll-wheel"></div></div>
         <span>Scroll</span>
       </div>
     </section>

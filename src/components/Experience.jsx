@@ -26,6 +26,14 @@ const experiences = [
     color: 'coral',
   },
   {
+    role: 'Capstone Project Lead',
+    company: 'Evaid — Legal Case Management Platform',
+    period: '2025 – 2026',
+    desc: 'Led development of an AI-powered legal/investigative case management system as a capstone project. Built a FastAPI backend with SQL Server, a React 19 + TypeScript frontend with graph-based evidence visualization (@xyflow/react), and integrated Azure AI Document Intelligence, Azure Vision API, and OpenAI to extract structured signals from uploaded PDFs and images. Implemented three-tier RBAC and end-to-end tests with Cypress.',
+    tags: ['React 19', 'TypeScript', 'FastAPI', 'Azure AI', 'OpenAI', 'SQL Server', 'Docker', 'Cypress'],
+    color: 'coral',
+  },
+  {
     role: 'CS & Math Tutor',
     company: 'Edmonds College',
     period: 'Jan 2023 – Nov 2023',
@@ -89,6 +97,21 @@ export default function Experience() {
                 <span className="edu-badge-item edu-badge-gold">🏅 {education.honors}</span>
                 <span className="edu-badge-item edu-badge-blue">🤖 {education.extra}</span>
               </div>
+              <div className="cert-block">
+                <p className="edu-courses-title">Internship Alternative — Certification</p>
+                <div className="cert-card">
+                  <div className="cert-icon">☁️</div>
+                  <div>
+                    <div className="cert-name">AWS Certified Developer – Associate</div>
+                    <div className="cert-code">DVA-C02</div>
+                    <div className="cert-desc">
+                      Validates expertise in developing, deploying, and debugging cloud-based applications on AWS — including Lambda, DynamoDB, API Gateway, S3, IAM, and CI/CD pipelines.
+                    </div>
+                    <div className="cert-status">🔄 In progress · 2025</div>
+                  </div>
+                </div>
+              </div>
+
               <div className="edu-courses">
                 <p className="edu-courses-title">Key Courses</p>
                 {[

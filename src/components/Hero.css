@@ -81,12 +81,36 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
-.hero-title {
-  font-size: clamp(36px, 5.5vw, 64px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -1px;
+.hero-name {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-student-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 20px;
+}
+
+.hero-info-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text2);
 }
 
 .gradient-text {
@@ -205,6 +229,7 @@
 }
 
 .avatar-inner span {
+  font-size: 52px;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

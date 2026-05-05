@@ -161,6 +161,48 @@
 
 .edu-gpa { color: var(--green); background: rgba(16,185,129,0.1); }
 
+.cert-block {
+  margin-bottom: 24px;
+}
+
+.cert-card {
+  display: flex;
+  gap: 14px;
+  background: rgba(249,115,22,0.07);
+  border: 1px solid rgba(249,115,22,0.25);
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 10px;
+}
+
+.cert-icon { font-size: 28px; flex-shrink: 0; }
+
+.cert-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cert-code {
+  font-size: 12px;
+  color: var(--coral-light);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cert-desc {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.cert-status {
+  font-size: 12px;
+  color: var(--coral-light);
+  font-weight: 500;
+}
+
 .edu-courses-title {
   font-size: 12px;
   font-weight: 700;
