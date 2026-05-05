@@ -1,0 +1,96 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0f;
+  --bg2: #12121a;
+  --bg3: #1a1a28;
+  --text: #e8e8f0;
+  --text2: #9090b0;
+  --purple: #7c3aed;
+  --purple-light: #a78bfa;
+  --cyan: #06b6d4;
+  --cyan-light: #67e8f9;
+  --coral: #f97316;
+  --coral-light: #fb923c;
+  --green: #10b981;
+  --pink: #ec4899;
+  --gradient: linear-gradient(135deg, var(--purple), var(--cyan));
+  --gradient2: linear-gradient(135deg, var(--coral), var(--pink));
+  --card-border: rgba(124, 58, 237, 0.2);
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+section { padding: 100px 0; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: var(--text2);
+  font-size: 16px;
+  max-width: 520px;
+  margin-bottom: 60px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--purple-light);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.fade-up { animation: fadeUp 0.7s ease both; }
