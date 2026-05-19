@@ -26,11 +26,11 @@ const experiences = [
     color: 'coral',
   },
   {
-    role: 'Capstone Project Lead',
+    role: 'Scrum Master & AI Engineer — Team Capstone',
     company: 'Evaid — Legal Case Management Platform',
     period: '2025 – 2026',
-    desc: 'Led development of an AI-powered legal/investigative case management system as a capstone project. Built a FastAPI backend with SQL Server, a React 19 + TypeScript frontend with graph-based evidence visualization (@xyflow/react), and integrated Azure AI Document Intelligence, Azure Vision API, and OpenAI to extract structured signals from uploaded PDFs and images. Implemented three-tier RBAC and end-to-end tests with Cypress.',
-    tags: ['React 19', 'TypeScript', 'FastAPI', 'Azure AI', 'OpenAI', 'SQL Server', 'Docker', 'Cypress'],
+    desc: 'Team capstone project: AI-powered legal/investigative case management system. Served as Scrum Master — facilitated sprint planning, standups, retrospectives, and backlog grooming across the team. Owned the entire AI layer: integrated Azure AI Document Intelligence, Azure Vision API, and OpenAI to automatically extract structured signals (key facts & entities) from uploaded PDFs and images.',
+    tags: ['Azure AI', 'OpenAI', 'FastAPI', 'Python', 'React 19', 'TypeScript', 'Scrum', 'SQL Server', 'Docker'],
     color: 'coral',
   },
   {

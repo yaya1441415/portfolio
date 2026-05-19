@@ -1,10 +1,10 @@
 import './About.css';
 
 const stats = [
-  { value: '3.6', label: 'GPA · Dean\'s List' },
-  { value: '6+', label: 'Projects Shipped' },
+  { value: '4+', label: 'Enterprise Clients' },
   { value: '56%', label: 'Adoption Increase' },
-  { value: '2025', label: 'CS Graduate' },
+  { value: '13 hrs', label: 'Saved / Week' },
+  { value: '10k+', label: 'Reviews Processed' },
 ];
 
 export default function About() {

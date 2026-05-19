@@ -5,15 +5,16 @@ import imgRecycling   from '../assets/Screenshot 2025-03-29 040758.png';
 import imgAzure       from '../assets/Screenshot 2025-05-16 112355.png';
 import imgAmazon      from '../assets/Screenshot 2025-09-03 220745.png';
 import imgMovie       from '../assets/Screenshot 2025-09-05 165909.png';
-import imgPair        from '../assets/WhatsApp Image 2026-05-05 at 2.03.57 PM.jpeg';
 import imgDocSummary  from '../assets/Screenshot 2025-09-05 004537.png';
 import imgEvaid       from '../assets/Screenshot 2026-05-05 145147.png';
+import imgPair        from '../assets/WhatsApp Image 2026-05-05 at 2.03.57 PM.jpeg';
 
 const projects = [
   {
     title: 'VigorNode — AI Trainer Platform',
-    desc: 'Startup: trainers build custom AI models trained on their coaching style and deploy agents to handle client coaching at scale. Cross-platform mobile/web app (iOS, Android, Web) with Expo Router, Supabase auth, PostgreSQL, and a NestJS REST API. Auth, dashboard, and client list are live — AI training pipeline actively in development.',
-    tags: ['React Native', 'Expo', 'TypeScript', 'NestJS', 'Supabase', 'PostgreSQL'],
+    desc: 'B2B SaaS startup: trainers build custom AI models trained on their coaching style and deploy agents to handle client coaching at scale — replacing manual 1:1 messaging.',
+    challenge: 'Designing a multi-tenant architecture where each trainer\'s AI model is isolated, versioned, and deployable on demand without cold-start latency.',
+    tags: ['React Native', 'Expo', 'TypeScript', 'NestJS', 'Supabase', 'PostgreSQL', 'Node.js'],
     color: 'purple',
     emoji: '💪',
     github: 'https://github.com/yaya1441415',
@@ -23,11 +24,13 @@ const projects = [
     teamLabel: 'Solo',
     role: 'Founder & Lead Engineer — architecture, frontend, backend',
     image: null,
+    featured: true,
   },
   {
     title: 'Pair — B2B Workflow SaaS',
-    desc: 'Production B2B SaaS for transportation & field-service companies. Replaces spreadsheets and paper with mobile-first digital timesheets, service reports, mileage tracking, and admin dashboards. Serving real paying clients (DAFE Transportation).',
-    tags: ['React Native', 'TypeScript', 'Node.js', 'AWS Lambda', 'DynamoDB', 'GraphQL'],
+    desc: 'Production B2B SaaS for transportation & field-service companies. Replaces spreadsheets and paper with mobile-first digital timesheets, service reports, and mileage tracking. Serving real paying clients (DAFE Transportation).',
+    challenge: 'Building a serverless architecture that scales per-company with strict data isolation, while remaining simple enough for non-technical field workers to use without training.',
+    tags: ['React Native', 'TypeScript', 'Node.js', 'AWS Lambda', 'DynamoDB', 'GraphQL', 'AppSync'],
     color: 'cyan',
     emoji: '🚛',
     github: 'https://github.com/yaya1441415',
@@ -37,36 +40,28 @@ const projects = [
     teamLabel: 'Solo',
     role: 'Sole developer — full stack, cloud infrastructure, client delivery',
     image: imgPair,
-  },
-  {
-    title: 'Azure Optimizer',
-    desc: 'Web platform that connects to your Azure account to provide real-time usage insights and automatically allocates and scales resources — maximising performance while minimising cloud costs.',
-    tags: ['React', 'Azure', 'Cloud', 'Node.js', 'TypeScript'],
-    color: 'cyan',
-    emoji: '☁️',
-    github: 'https://github.com/yaya1441415',
-    live: null,
-    teamLabel: 'Solo',
-    role: 'Sole developer — Azure integration, dashboard, resource scheduling',
-    image: imgAzure,
+    featured: true,
   },
   {
     title: 'Evaid — Legal Case Management Platform',
-    desc: 'Capstone project: AI-powered legal/investigative case management system. Ingests PDFs and images, runs Azure AI Document Intelligence + OpenAI pipelines to extract structured "signals" (key facts & entities), and presents everything through a case management UI with graph-based evidence visualization. Three-tier RBAC: Evaid Admin, Org Admin, and Agent.',
-    tags: ['React 19', 'TypeScript', 'FastAPI', 'Python', 'Azure AI', 'OpenAI', 'SQL Server', 'Docker', '@xyflow/react'],
+    desc: 'Team capstone: AI-powered legal/investigative case management system that ingests PDFs and images, runs Azure AI pipelines to extract structured signals, and maps evidence relationships in an interactive graph.',
+    challenge: 'Coordinating an async evidence ingestion worker loop that reliably processes documents through multiple AI services (Document Intelligence → Vision → OpenAI) without data loss or race conditions.',
+    tags: ['React 19', 'TypeScript', 'FastAPI', 'Azure AI', 'OpenAI', 'SQL Server', 'Docker', '@xyflow/react'],
     color: 'coral',
     emoji: '⚖️',
     github: 'https://github.com/yaya1441415',
     live: null,
     highlight: true,
     label: 'Capstone',
-    teamLabel: 'Solo',
-    role: 'Sole developer — full stack, AI pipeline, graph visualization, RBAC system',
+    teamLabel: 'Team',
+    role: 'Scrum Master & AI Engineer — led sprints, owned Azure AI Document Intelligence, Azure Vision, OpenAI signal extraction pipeline',
     image: imgEvaid,
+    featured: true,
   },
   {
     title: 'Local RAG Pipeline',
     desc: 'Fully local, zero-cost RAG system — upload PDFs and chat with them. No OpenAI, no API keys. Uses Ollama (llama3.2 + nomic-embed-text) for embeddings and generation, Qdrant as the vector store, and Inngest for background job orchestration.',
+    challenge: 'Achieving acceptable response latency with a fully local LLM stack on consumer hardware by tuning chunk size, top-k retrieval, and model quantization.',
     tags: ['FastAPI', 'Python', 'Qdrant', 'Ollama', 'Streamlit', 'LlamaIndex', 'Inngest'],
     color: 'green',
     emoji: '🧠',
@@ -75,6 +70,7 @@ const projects = [
     teamLabel: 'Solo',
     role: 'Sole developer — pipeline design, backend, frontend',
     image: null,
+    featured: true,
   },
   {
     title: 'AI Movie Recommendation Engine',
@@ -87,6 +83,20 @@ const projects = [
     teamLabel: 'Solo',
     role: 'Sole developer — ML pipeline, backend API, React frontend',
     image: imgMovie,
+    featured: false,
+  },
+  {
+    title: 'Azure Optimizer',
+    desc: 'Web platform connecting to Azure accounts to surface real-time usage insights and automatically allocate and scale cloud resources — maximising performance while minimising costs.',
+    tags: ['React', 'TypeScript', 'Azure', 'Node.js'],
+    color: 'cyan',
+    emoji: '☁️',
+    github: 'https://github.com/yaya1441415',
+    live: null,
+    teamLabel: 'Solo',
+    role: 'Sole developer — Azure integration, dashboard, resource scheduling',
+    image: imgAzure,
+    featured: false,
   },
   {
     title: 'Document Summarization Platform',
@@ -99,6 +109,7 @@ const projects = [
     teamLabel: 'Solo',
     role: 'Sole developer — microservices architecture, NLP integration',
     image: imgDocSummary,
+    featured: false,
   },
   {
     title: 'Amazon Reviews Analytics Platform',
@@ -111,6 +122,7 @@ const projects = [
     teamLabel: 'Solo',
     role: 'Sole developer — scraping engine, NLP pipeline, dashboard',
     image: imgAmazon,
+    featured: false,
   },
   {
     title: 'Gamified Recycling Web App',
@@ -123,11 +135,15 @@ const projects = [
     teamLabel: 'Solo',
     role: 'Sole developer — computer vision pipeline, backend, gamification',
     image: imgRecycling,
+    featured: false,
   },
 ];
 
 export default function Projects() {
   const [hovered, setHovered] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visible = showAll ? projects : projects.filter(p => p.featured);
 
   return (
     <section id="projects">
@@ -135,7 +151,7 @@ export default function Projects() {
         <p className="section-label">What I've Built</p>
         <h2 className="section-title">Featured Projects</h2>
         <p className="section-sub">
-          From local AI pipelines to production B2B SaaS — each project ships real value. All projects built individually unless noted otherwise.
+          Production-grade work spanning AI, SaaS, and cloud systems — all individually built unless noted.
         </p>
 
         <div className="oss-banner">
@@ -150,7 +166,7 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          {projects.map((p, i) => (
+          {visible.map((p, i) => (
             <div
               key={p.title}
               className={`project-card project-card--${p.color} ${hovered === i ? 'hovered' : ''} ${p.highlight ? 'project-card--featured' : ''}`}
@@ -159,7 +175,7 @@ export default function Projects() {
             >
               {p.image ? (
                 <div className="project-img-wrap">
-                  <img src={p.image} alt={`${p.title} screenshot`} className="project-img" />
+                  <img src={p.image} alt={`${p.title} screenshot`} className="project-img" loading="lazy" decoding="async" />
                 </div>
               ) : (
                 <div className="project-img-placeholder">
@@ -190,6 +206,11 @@ export default function Projects() {
 
               <h3 className="project-title">{p.title}</h3>
               <p className="project-desc">{p.desc}</p>
+              {p.challenge && (
+                <div className="project-challenge">
+                  <span className="challenge-label">⚡ Key challenge:</span> {p.challenge}
+                </div>
+              )}
               {p.role && (
                 <p className="project-role"><strong>My role:</strong> {p.role}</p>
               )}
@@ -200,7 +221,18 @@ export default function Projects() {
           ))}
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+        <p className="img-attribution">
+          📸 All project screenshots are original work created by Yahya Ouchchen from personal and freelance projects.
+        </p>
+
+        <div className="projects-footer">
+          <button className="toggle-btn" onClick={() => setShowAll(v => !v)}>
+            {showAll ? (
+              <><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 15l-6-6-6 6"/></svg> Show less</>
+            ) : (
+              <>Show all {projects.length} projects <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6"/></svg></>
+            )}
+          </button>
           <a href="https://github.com/yaya1441415" target="_blank" rel="noreferrer" className="view-more-btn">
             View all on GitHub
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>

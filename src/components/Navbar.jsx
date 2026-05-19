@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const links = ['About', 'Skills', 'Projects', 'Experience', 'Contact'];
+const links = ['Skills', 'Projects', 'Experience', 'Contact'];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +33,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="/resume.pdf" className="nav-cta" target="_blank" rel="noreferrer">Resume</a>
+            <a href="/resume.docx" download className="nav-cta">Resume ↓</a>
           </li>
         </ul>
         <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="menu">

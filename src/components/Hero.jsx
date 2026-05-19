@@ -13,25 +13,26 @@ export default function Hero() {
       </div>
       <div className="container hero-content">
         <div className="hero-text fade-up">
-          <div className="hero-badge">
-            <span className="badge-dot"></span>
-            Open to internship &amp; new grad opportunities
-          </div>
           <h1 className="hero-name">Yahya Ouchchen</h1>
+          <p className="hero-tagline">
+            Full-Stack Developer &amp; Startup Founder specializing in
+            <span className="gradient-text"> React, Node.js, Python</span>, and cloud-native systems.
+          </p>
           <div className="hero-student-info">
-            <span className="hero-info-pill">🎓 B.S. Computer Science &amp; Data Analytics</span>
+            <span className="hero-info-pill">🎓 CS &amp; Data Analytics Student</span>
+            <span className="hero-info-pill">📚 B.S. Computer Science &amp; Data Analytics</span>
             <span className="hero-info-pill">📅 Graduating 2026</span>
             <span className="hero-info-pill">📍 Seattle, WA</span>
           </div>
-          <p className="hero-desc">
-            Software engineering student skilled in Python, JavaScript, and cloud-native systems.
-            I build scalable microservices, SaaS platforms, and AI-powered applications — shipped to real clients.
-          </p>
           <div className="hero-actions">
             <button className="btn-primary" onClick={() => scrollTo('projects')}>
               View My Work
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
+            <a href="/resume.docx" download className="btn-download">
+              Download Resume
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
             <button className="btn-ghost" onClick={() => scrollTo('contact')}>
               Contact Me
             </button>
@@ -51,9 +52,7 @@ export default function Hero() {
         <div className="hero-visual fade-up" style={{ animationDelay: '0.2s' }}>
           <div className="avatar-card">
             <div className="avatar-ring">
-              <div className="avatar-inner">
-                <span>YO</span>
-              </div>
+              <div className="avatar-inner"><span>YO</span></div>
             </div>
             <div className="floating-chip chip1"><span>⚡</span> React Native</div>
             <div className="floating-chip chip2"><span>🐍</span> Python</div>
@@ -62,7 +61,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="scroll-hint" onClick={() => scrollTo('about')}>
+      <div className="scroll-hint" onClick={() => scrollTo('skills')}>
         <div className="scroll-mouse"><div className="scroll-wheel"></div></div>
         <span>Scroll</span>
       </div>

@@ -120,6 +120,14 @@
   background-clip: text;
 }
 
+.hero-tagline {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text2);
+  max-width: 500px;
+  margin-bottom: 18px;
+}
+
 .hero-desc {
   color: var(--text2);
   font-size: 17px;
@@ -153,6 +161,29 @@
 
 .btn-primary:hover {
   opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--purple-light);
+  border: 1px solid rgba(124,58,237,0.4);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.btn-download:hover {
+  background: rgba(124,58,237,0.1);
+  border-color: var(--purple);
   transform: translateY(-2px);
 }
 

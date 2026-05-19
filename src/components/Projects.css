@@ -238,6 +238,62 @@
   margin-top: 4px;
 }
 
+.project-challenge {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.03);
+  border-left: 2px solid var(--cyan);
+  border-radius: 0 6px 6px 0;
+}
+
+.challenge-label {
+  font-weight: 700;
+  color: var(--cyan-light);
+}
+
+.img-attribution {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text2);
+  opacity: 0.6;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.projects-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.05);
+  color: var(--text2);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.toggle-btn:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+}
+
 .view-more-btn {
   display: inline-flex;
   align-items: center;
